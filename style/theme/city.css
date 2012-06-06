@@ -1,0 +1,34 @@
+.buildingSymbolSmall
+{
+    float:left;
+    height:50px;
+    margin-right:20px;
+}
+
+.buildingSymbolMedium
+{
+    float:left;
+    height:150px;
+    margin-right:40px;
+}
+
+.buildingSymbolBig
+{
+    float:left;
+    height:200px;
+    margin-right:20px;
+}
+
+.clearFloatLeft
+{
+    clear:left;
+    margin-top:100px;
+    height:3px;
+    width:100%;
+    background:#666;
+}
+
+td
+{
+    width:170px;
+}

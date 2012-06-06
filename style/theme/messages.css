@@ -1,0 +1,22 @@
+.unread
+{
+	font-weight:bold;
+}
+
+#submenu a
+{
+    display:inline-block;
+    color:#ccc;
+    text-decoration:none;
+    background:rgba(10,10,10,0.3);
+    border:0px solid #777;
+    text-align:center;
+    padding:8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#submenu a:hover
+{
+    background:rgba(10,10,10,0.4);
+}

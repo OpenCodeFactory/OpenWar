@@ -1,0 +1,92 @@
+body
+{
+	color:#bbb;
+	font-family:Tahoma, Helvetica, sans-serif;
+	
+	background:url("images/background dark.jpg");
+}
+
+h1
+{
+	color:#e8e8e8;
+	font-size:24px;
+}
+
+a
+{
+    color:#888;
+}
+
+#header
+{
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    height:40px;
+    
+    padding:0px;
+    
+    border-bottom:2px red solid;
+    background:url("images/background light.jpg");
+    
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(30, 30, 30, 0.3);
+    box-shadow: 0px 0px 10px 10px rgba(30, 30, 30, 0.3);
+}
+
+#menu
+{
+    padding:0px;
+	text-align:center;
+}
+
+
+#menu a
+{
+    display:inline-block;
+    color:#ccc;
+    text-decoration:none;
+    background:rgba(10,10,10,0.3);
+    width:150px;
+    border:0px solid #777;
+    border-right-width:1px;  
+    text-align:center;
+    padding:10px;
+    margin-left:-4px;
+}
+
+#menu a:hover
+{
+    background:rgba(10,10,10,0.4);
+}
+
+#menu #link1
+{
+    border-left-width:1px;
+}
+
+#time
+{
+    margin-top:50px;
+}
+
+
+#content
+{
+    width:70%;
+    padding:20px;
+    padding-bottom:20px;
+    margin:40px auto;
+    background:rgba(200,200,200,0.1);
+    border:1px solid #888;
+}
+
+th
+{
+    text-align:left;
+}
+
+.memberlist td
+{
+	padding: 5px;
+}
