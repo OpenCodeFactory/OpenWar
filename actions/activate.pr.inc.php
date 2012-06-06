@@ -48,7 +48,7 @@ function GenerateCity($userName)	//generiert bei der Aktivierung eine eigene Sta
 						VALUES ('$accountID', '$cityName', '$locationX', '$locationY')");
 	
 	//holt sich die CityID von der Datenbank
-	$sqlCity = mysql_fetch_object(mysql_query("SELECT cityID FROM City WHERE accountID LIKE '$accountID'")); 
+	$sqlCity = mysql_fetch_object(mysql_query("SELECT cityID FROM City WHERE accountID = '$accountID'")); 
 	$cityID = $sqlCity->cityID;
 	
     $dbGenerateResources = mysql_query("INSERT INTO Resources (cityID, lastUpdated, area, money, iron, energy, mineralOil, maxArea, maxIron, maxMineralOil, prodIron, prodMoney, prodEnergy, prodMineralOil)

@@ -78,7 +78,7 @@ elseif(strlen($password)<5)	//kontrolliert Passwort auf Laenge
 
 elseif(check_email($emailAdress)==FALSE)
 {
-	$notification = 'Keine gültige E-Mail eingeben';
+	$notification = 'Keine g&uuml;ltige E-Mail eingeben';
 }
 
 
