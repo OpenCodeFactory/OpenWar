@@ -1,7 +1,11 @@
 fuel/app/logs/*/*/*
 fuel/app/cache/*/*
 
-config.php
+config/config.php
 .gitignore
 troops.jpg
 play.php.conflict
+.buildpath
+.project
+.settings/*
+
