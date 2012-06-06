@@ -1,2 +1,7 @@
 fuel/app/logs/*/*/*
 fuel/app/cache/*/*
+
+config.php
+.gitignore
+troops.jpg
+play.php.conflict
