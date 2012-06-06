@@ -25,8 +25,8 @@ if( !isset($OWEXEC) )
     die("You don't have permissions to access this file");
 
 //nimmt die Variablen von der index.php und wandelt das pw in md5 um
-$username = $_POST["username"]; 
-$password = md5($_POST["password"]); 
+$username = mysql_real_escape_string($_POST["username"]); 
+$password = mysql_real_escape_string(md5($_POST["password"])); 
 
 $status = true;
 
@@ -34,7 +34,7 @@ $status = true;
 //datenbankabfrage ob user vorhanden, falls ja dann wird die ID als Session_ID gesetzt
 if(!empty($username) && !empty($_POST["password"]))
 {
-	$sql = "SELECT * FROM Account WHERE name LIKE '$username' LIMIT 1"; 
+	$sql = "SELECT * FROM Account WHERE name = '$username' LIMIT 1"; 
 	$sqlResult = mysql_query($sql); 
 	$row = mysql_fetch_object($sqlResult);  
 
