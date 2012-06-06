@@ -3,7 +3,7 @@ OpenWar
 
 Browsergame with Buildings, Troops, etc.
 
-Developers:
+<b>Developers:</b>
 
 Juffinger Jonas <br>
 Kecht Andreas<br>
