@@ -23,7 +23,7 @@
 	
 	
 	//einige Funktionen für diese Datei
-	function userInDatabase($username)		//prüft ob User schon vorhanden
+	function userInDatabase($username)		//prueft ob User schon vorhanden
 	{
 		$sql = "SELECT accountID FROM Account WHERE name LIKE '$username'"; 
 		$sqlResult = mysql_query($sql); 
@@ -32,7 +32,7 @@
 		if(isset($row->accountID)) return true;
 	    else return false;
 	}
-	function emailInDatabase($email)		//prüft ob E-Mail schon vorhanden
+	function emailInDatabase($email)		//prueft ob E-Mail schon vorhanden
 	{
 		$sql = "SELECT accountID FROM Account WHERE emailAdress LIKE '$email'"; 
 		$sqlResult = mysql_query($sql); 
@@ -41,13 +41,13 @@
 		if(isset($row->accountID)) return true;
 	    else return false;
 	}
-	function check_email($email) 			//prüft ob E-Mail auch wirkliche eine gültige Adresse ist
+	function check_email($email) 			//prueft ob E-Mail auch wirkliche eine gueltige Adresse ist
 	{        
 			if (preg_match('/^[^\x00-\x20()<>@,;:\\".[\]\x7f-\xff]+(?:\.[^\x00-\x20()<>@,;:\\".[\]\x7f-\xff]+)*\@[^\x00-\x20()<>@,;:\\".[\]\x7f-\xff]+(?:\.[^\x00-\x20()<>@,;:\\".[\]\x7f-\xff]+)+$/i', $email)) 
 				return true;
 		    	return false;
 		}
-	function GenerateString($length) 		//erstellt einen zufälligen String mit der Länge $length
+	function GenerateString($length) 		//erstellt einen zufaelligen String mit der Laenge $length
 	{
 		srand ((double)microtime()*1000000); 
 	    $zufall = rand(); 
