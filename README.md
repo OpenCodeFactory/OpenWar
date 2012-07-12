@@ -1,8 +1,6 @@
 OpenWar
 =======
 
-Browsergame with Buildings, Troops, etc.
-
 <b>Developers:</b>
 
 Juffinger Jonas <br>
