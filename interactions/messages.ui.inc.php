@@ -96,14 +96,14 @@ else
 				
 				$sender = mysql_fetch_object( mysql_query("SELECT name FROM Account WHERE accountID = '$row->sender'") )->name;
 				
-				if($row->sender != $accountID)
-				{
+				//if($row->sender != $accountID)
+				//{
 					//als gelesen markieren
 					$update = mysql_query("UPDATE Messages Set viewed = '1' WHERE messageID = '$show'");
 					
 					if($update == false)
 						die(mysql_error());
-				}
+				//}
 				
 				echo "<br/>";
 				?>
@@ -123,7 +123,7 @@ else
 		else if($_GET["type"] == "receivedMessages")
 		{
 			echo "<h3>Empfangene Nachrichten:</h3>";			
-			$messages = mysql_query("SELECT * FROM Messages WHERE receiver = '$accountID'");
+			$messages = mysql_query("SELECT * FROM Messages WHERE receiver = '$accountID' ORDER BY sendDate DESC");
 			while($row = mysql_fetch_object($messages))
 			{
 				if($row->viewed == 0)
@@ -144,7 +144,7 @@ else
 		else if($_GET["type"] == "sentMessages")
 		{
 			echo "<h3>Gesendete Nachrichten:</h3>";
-			$messages = mysql_query("SELECT * FROM Messages WHERE sender = '$accountID'");
+			$messages = mysql_query("SELECT * FROM Messages WHERE sender = '$accountID' ORDER BY sendDate DESC");
 			while($row = mysql_fetch_object($messages))
 			{		
 				$receiver = mysql_fetch_object( mysql_query("SELECT name FROM Account WHERE accountID = '$row->receiver'") )->name;
