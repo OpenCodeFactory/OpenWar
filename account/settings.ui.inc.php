@@ -36,9 +36,7 @@ if( !isset($OWEXEC) )
 if(!isset($_SESSION['accountID']))
 {
 	/// Weiterleitung auf Startseite wenn nicht eingeloggt
-	?> 
-		<meta http-equiv="refresh" content="0; URL=index.php">
-	<?php
+	header("Location:index.php");
 }
 else
 {
@@ -60,10 +58,8 @@ else
 	{
 		if($adminView == false)
 		{ 
-			?>
-			 <meta http-equiv="refresh" content="0, URL=play.php?front=settings&show=password"> 
-			<?
 			$ID = $_SESSION["accountID"];
+			header("Location:play.php?front=settings&show=password");
 		}
 		else
 		{
@@ -152,7 +148,7 @@ else
 		$emailDb = $row->emailAdress;
 		
 	?>
-	<link rel="stylesheet" type="text/css" href="style/theme/settings.css" />	
+	<link rel="stylesheet" type="text/css" href="styles/settings.css" />	
 	<script type="text/javascript" src="includes/md5.js"></script>
 	<script type="text/javascript">
 		
@@ -282,12 +278,12 @@ else
 				
 				<tr><td><br/></td></tr>
 				<tr>
-					<td>Geburtsdatum:</td><td><input type="date" name="birthDate" maxlength="10" value="<? echo $row->birthDate; ?>"/>&nbsp;(dd.mm.yyyy)</td></tr>
+					<td>Geburtsdatum:</td><td><input type="text" name="birthDate" maxlength="10" value="<? echo $row->birthDate; ?>"/>&nbsp;(dd.mm.yyyy)</td></tr>
 					<tr><td></td><td>Hier kannst du dein Alter eingeben</td></tr>
 				
 				<tr><td><br/></td></tr>
 				<tr>
-					<td>Land:</td><td><select name="country"><? include "countries.php"; ?></select></td></tr>
+					<td>Land:</td><td><select name="country"><? include "includes/countries.php"; ?></select></td></tr>
 					<tr><td></td><td>Hier kannst du Land ausw&auml;hlen</td></tr>
 				
 				<tr><td><br/></td></tr>

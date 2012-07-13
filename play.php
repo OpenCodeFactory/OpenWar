@@ -67,25 +67,24 @@ else
 	<?php 
 	if(!isset($_SESSION['accountID']))
     {
-    	?> 
-		<meta http-equiv="refresh" content="1; URL=index.php">
-    	<?php
+    	header("Location:index.php");
     }
     else
     {
     	
 	?>
 		<title>Open War</title>
-		<link rel="stylesheet" type="text/css" href="style/theme/play.css">
-		<link rel="stylesheet" type="text/css" href="style/theme/input.css">
-		<link rel="stylesheet" type="text/css" href="style/theme/city.css">
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="styles/play.css">
+		<link rel="stylesheet" type="text/css" href="styles/input.css">
+		<link rel="stylesheet" type="text/css" href="styles/city.css">
 	</head>
 	<body>
 	   <div id="header">
     		<div id="menu">
     			<a href="play.php" id="link1">&Uuml;bersicht</a>
     			<a href="play.php?front=messages">Nachrichten</a>
-    			<!--<a href="play.php?front=notifications">Statusmeldungen</a>-->
+    			<a href="play.php?front=notifications">Statusmeldungen</a>
     			<a href="play.php?front=settings">Einstellungen</a>
     			<a href="play.php?front=memberlist">Mitglieder</a>
     			<?php 
@@ -100,7 +99,7 @@ else
 				} 
 				
     			?>
-    			<a id="link5" href="play.php?front=logout" >Logout</a>
+    			<a href="play.php?front=logout" >Logout</a>
     		
     			
     			
@@ -120,7 +119,7 @@ else
 		<div id="content">
 		    <div id="time">
                 <?php
-                    include "game/time.ui.inc.php";
+	            	include "game/time.ui.inc.php";
                 ?>
             </div>
 		    

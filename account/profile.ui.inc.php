@@ -35,9 +35,7 @@ if( !isset($OWEXEC) )
 
 if(!isset($_SESSION['accountID']))
 {
-	?> 
-		<meta http-equiv="refresh" content="0; URL=index.php">
-	<?php
+	header("Location:index.php");
 }
 else
 {
@@ -68,7 +66,7 @@ else
 	
 ?>
 
-<link rel="stylesheet" type="text/css" href="style/theme/profile.css" />
+<link rel="stylesheet" type="text/css" href="styles/profile.css" />
 <div id="profile">
 <? if($status == true){?>
 <h1><u>Benutzer: <? echo $row->name; ?></u></h1>

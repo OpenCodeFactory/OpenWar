@@ -22,7 +22,7 @@
 	if(!isset($OWEXEC))		die("You don't have permissions to access this file");
 	
 	
-	//einige Funktionen f�r diese Datei
+	//einige Funktionen f�r diese Datei
 	function userInDatabase($username)		//prueft ob User schon vorhanden
 	{
 		$sql = "SELECT accountID FROM Account WHERE name LIKE '$username'"; 
@@ -97,7 +97,11 @@
 //-------------------------------Verarbeitung der Variablen und Senden an die Datenbank------------------//
 	else 
 	{
+		/// MD$ = UNSICHER!!
+		/// UMSTELLUNG AUF SHA256 oder höher folg!
+		
 		$passwordMD5 = md5($password);
+		//$passwordHASH = hash("sha512", $password); 
 		$activationKey = md5($username.GenerateString(15));		//ist immer username + zufallstring und das ganze in MD5
 		$activated = 2; 	// 1 - aktiviert
 							// 2-  nicht aktiviert (standartmaeßig)

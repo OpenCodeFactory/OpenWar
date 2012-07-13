@@ -28,9 +28,7 @@ include 'config/initMysql.pr.inc.php';
 
 if(!isset($_SESSION['accountID']))
 {
-	?> 
-		<meta http-equiv="refresh" content="0; URL=index.php">
-	<?php
+	header("Location:index.php");
 }
 
 ?>

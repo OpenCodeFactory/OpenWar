@@ -10,8 +10,6 @@
 	    
         $success = mysql_query("UPDATE Account SET role='$role' WHERE accountID='$id'");
 	
-		?> 
-		<meta http-equiv="refresh" content="0; URL=<? echo $_POST["page"]; ?>"> 
-		<? 
+		header("Location:" . html_entity_decode($_POST["page"]));
 	}
 ?>

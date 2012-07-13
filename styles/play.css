@@ -3,7 +3,7 @@ body
 	color:#bbb;
 	font-family:Tahoma, Helvetica, sans-serif;
 	
-	background:url("images/background dark.jpg");
+	background:url("../images/background dark.jpg");
 }
 
 h1
@@ -28,7 +28,7 @@ a
     padding:0px;
     
     border-bottom:2px red solid;
-    background:url("images/background light.jpg");
+    background:url("../images/background light.jpg");
     
     -webkit-box-shadow: 0px 0px 10px 10px rgba(30, 30, 30, 0.3);
     box-shadow: 0px 0px 10px 10px rgba(30, 30, 30, 0.3);

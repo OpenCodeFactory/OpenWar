@@ -9,7 +9,7 @@ $row = mysql_fetch_object($sqlResult);
 	
 if(($row->role)!="admin")
 {
-  	?> <meta http-equiv="refresh" content="1; URL=play.php"> <?
+  	header("Location:play.php");
 }
 else
 {
@@ -21,7 +21,7 @@ else
 	    }
 	}
 	
-  	?>	<form action="?front=admin&action=pull" method="POST">
+  	?>	<form action="play.php?front=admin&action=pull" method="POST">
     	<input type="submit" value="Pull Changes">
     	</form> 
    	<?

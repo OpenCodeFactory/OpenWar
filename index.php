@@ -85,14 +85,15 @@ include 'config/initMysql.pr.inc.php';
         //wird die login.pr.inc.php verwendet ist der obige code 
         //dazu da um es als index.php?action=login darzustellen
 		?>
-		<link rel="stylesheet" type="text/css" href="/style/theme/index.css">
-		<link rel="stylesheet" type="text/css" href="/style/theme/input.css">
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
+		<link rel="stylesheet" type="text/css" href="styles/input.css">
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="includes/index.js"></script>
 	</head>
     <body>
     <!-- - - - - - - - - - - - Registrierungsformular- - - - - - - - - - - - - -->
-    	<img src="style/images/logo.png" id="title" alt="logo" />
+    	<img src="images/logo.png" id="title" alt="logo" />
     	<div id="content">
     		<div id="register" class="box">
     			<h1>Registrieren</h1>

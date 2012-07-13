@@ -37,9 +37,7 @@ $accountID = $_SESSION['accountID'];
 
 if(!isset($_SESSION['accountID']))
 {
-	?> 
-		<meta http-equiv="refresh" content="1; URL=index.php">
-	<?php
+	header("Location:index.php");
 }
 else
 {
@@ -53,7 +51,7 @@ else
     }
 ?>
 
-<link rel="stylesheet" type="text/css" href="style/theme/messages.css">
+<link rel="stylesheet" type="text/css" href="styles/messages.css">
 <?php
    if(isset($success))
    {

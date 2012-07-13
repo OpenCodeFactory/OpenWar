@@ -27,6 +27,10 @@ if( !isset($OWEXEC) )
 //nimmt die Variablen von der index.php und wandelt das pw in md5 um
 $username = mysql_real_escape_string($_POST["username"]); 
 $password = mysql_real_escape_string(md5($_POST["password"])); 
+//$password = hash("sha512", $_POST["password"]); 
+
+/// NOTIZ: MD5 = unsicher -> Umstellung auf SHA256 oder höher!
+/// -FOLGT!
 
 $status = true;
 
@@ -50,7 +54,7 @@ if(!empty($username) && !empty($_POST["password"]))
 		    $_SESSION["username"] = $username; 
 		    $_SESSION["accountID"] = $row->accountID;
 		    $notification = "Login erfolgreich!";
-			?>	<meta http-equiv="refresh" content="1; URL=play.php">  <?php
+			header("Location:play.php");
 		}
     } 
 	else

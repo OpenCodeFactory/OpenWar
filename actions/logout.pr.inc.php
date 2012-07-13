@@ -27,8 +27,6 @@ if( !isset($OWEXEC) )
 
 	@session_start();
 	session_destroy();
-	
-	echo'Du wurdest erfolgreich ausgeloggt bitte melde dich wieder an, du wirst weitergeleitet. ';
+	header("Location:index.php")
 
 ?>
-<meta http-equiv="refresh" content="1; URL=index.php">

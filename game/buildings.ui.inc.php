@@ -36,15 +36,13 @@ if( !isset($OWEXEC) )
 
 if(!isset($_SESSION['accountID']))
 {
-    ?> 
-        <meta http-equiv="refresh" content="1; URL=index.php">
-    <?php
+	header("Location:index.php");
 }
 else
 {
     if(!isset($_GET["buildingID"]))
     {
-        die('<meta http-equiv="refresh" content="1; URL=play.php">');
+        header("Location:play.php");
     }
     
     $buildingID = $_GET["buildingID"];
