@@ -97,11 +97,8 @@
 //-------------------------------Verarbeitung der Variablen und Senden an die Datenbank------------------//
 	else 
 	{
-		/// MD$ = UNSICHER!!
-		/// UMSTELLUNG AUF SHA256 oder höher folg!
-		
-		$passwordMD5 = md5($password);
-		//$passwordHASH = hash("sha512", $password); 
+		//$passwordHash = hash("sha512", $password); 
+		$passwordHash = md5($password);
 		$activationKey = md5($username.GenerateString(15));		//ist immer username + zufallstring und das ganze in MD5
 		$activated = 2; 	// 1 - aktiviert
 							// 2-  nicht aktiviert (standartmaeßig)
@@ -109,7 +106,7 @@
 		
 		//daten an die db senden
 		$dbUpdate = "INSERT INTO Account (name, password, emailAdress, country, activated, role) 
-					 VALUES ('".$username."', '".$passwordMD5."', '".$emailAdress."', '".$country."', '".$activated."', 'user')";
+					 VALUES ('".$username."', '".$passwordHash."', '".$emailAdress."', '".$country."', '".$activated."', 'user')";
 		$dbActivation= "INSERT INTO Activation (ActivationKey, ID, userName) 
 						VALUES ('".$activationKey."', '".$idForActivation."', '".$username."')";
 					

@@ -27,10 +27,9 @@ if( !isset($OWEXEC) )
 //nimmt die Variablen von der index.php und wandelt das pw in md5 um
 $username = mysql_real_escape_string($_POST["username"]); 
 $password = mysql_real_escape_string(md5($_POST["password"])); 
-//$password = hash("sha512", $_POST["password"]); 
+//$password = hash("sha512", mysql_real_escape_string($_POST["password"])); 
 
-/// NOTIZ: MD5 = unsicher -> Umstellung auf SHA256 oder höher!
-/// -FOLGT!
+/// NOTIZ: MD5 = unsicher -> SHA512 !? 
 
 $status = true;
 
@@ -42,7 +41,7 @@ if(!empty($username) && !empty($_POST["password"]))
 	$sqlResult = mysql_query($sql); 
 	$row = mysql_fetch_object($sqlResult);  
 
-	if($row->password == $password) 
+	if($row && $row->password == $password) 
     { 
     	
     	if($row->activated == 2)
